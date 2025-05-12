@@ -161,11 +161,11 @@
   color: #747474;
 }
 
-@media screen and (max-width: 430px) {
-  .form-container{
-    width: 100%;
-    margin-left: 1px;
-    margin-top: 150px;
+@media (max-width: 430px) {
+  .form-container {
+    display: flex;
+    justify-content: center; /* أفقي */
+    align-items: center;     /* عمودي */
+    height: 100vh;           /* يجعل العنصر في منتصف الشاشة */
   }
-
 }
