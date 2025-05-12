@@ -272,13 +272,14 @@ padding: 0 12px;
   
   .container h1{
    color: #b71540;
-   margin-right: 220px;
+   margin-right: 150px;
+   margin-bottom: -50px;
    
 }
 
 .container .button{
-  margin-top: 20px;
-  margin-right: 240px;
+  margin-top: 40px;
+  margin-right: 160px;
   color: #ff2c64;
 }
 
@@ -333,7 +334,7 @@ padding: 0 12px;
   @media screen and (max-width: 600px) {
   .products{
     display: inline-block;
-    margin-left: 70px;
+    margin-left: 30px;
   }
   
 
@@ -341,10 +342,12 @@ padding: 0 12px;
   .grid{
     display: block;
     font-size: 30px;
+    width: 40px;
   }
 
   .item a{
     padding: 50px 0 ;
+    width: 300px;
   }
 }
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -479,8 +482,8 @@ margin-left: 20px;
 
   .hot{
     display: block;
-    width: 400px;
-    margin-left: 45px;
+    width: 350px;
+    margin-left: 35px;
   }
 
   .hot h2{
