@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adidas.css">
+    <link rel="icon" href="img/adidas_logo.svg">
+    <script src="https://kit.fontawesome.com/51b677b776.js" crossorigin="anonymous"></script>
+    <title>A D I D A S</title>
+    <style>
+        /* التنسيقات العامة */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            padding: 15px;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        /* تنسيق قائمة الكمبيوتر (تبقى كما هي) */
+        .desktop-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
+        
+        .desktop-nav a {
+            text-decoration: none;
+            color: #000;
+            font-weight: 700;
+        }
+        
+        .signup-btn {
+            background: #ff2c64;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        
+        .signup-btn:hover{
+          background-color: #000000;
+        }
+        /* تنسيق قائمة الجوال (مخفي افتراضياً) */
+        .hamburger-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .mobile-nav ul {
+            list-style: none;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .mobile-nav li {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .mobile-nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            padding: 10px;
+            margin-right: -70px;
+            transition: all 0.3s;
+        }
+        
+        .mobile-nav a:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .mobile-close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-size: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* التعديلات للجوال فقط (أقل من 768px) */
+        @media (max-width: 768px) {
+            .hamburger-btn {
+                display: block;
+            }
+            
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-nav.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="ads">
+     <a href="">1-3 Day Delivery in Riyadh</a>
+     <a href="">WELCOME OFFER 10% OFF</a>
+     <a href="">FAST & SIMPLE SIZE EXCHANGE</a>
+  </div>
+     <header>
+        <button class="hamburger-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <a href="index.html"> <img src="img/adidas_logo.svg" alt="Adidas" class="logo"></a>
+        
+        <!-- قائمة الكمبيوتر (تبقى كما هي) -->
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#"><i class="far fa-heart"></i></a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                <li><a class="signup-btn" href="#">SIGN UP</a></li>
+            </ul>
+        </nav>
+        
+        <!-- قائمة الجوال الجديدة -->
+        <nav class="mobile-nav">
+            <button class="mobile-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#"><i class="fas fa-male"></i> Men</a></li>
+                <li><a href="#"><i class="fas fa-female"></i> Women</a></li>
+                <li><a href="#"><i class="fas fa-child"></i> Kids</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="far fa-heart"></i> Wishlist</a></li>
+                <li><a href="#"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li><a class="signup-btn" href="#"><i class="fas fa-user-plus"></i> SIGN UP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section>
+    <div class="container">
+        <p>Your search Results for :</p>
+
+          <h2>"dress"<span class="small-number">(82)</span></h2>
+
+          <button class="filter-button">
+  <span>Filter & Sort</span>
+  <img src="img/filter-6535.png" alt="Filter Icon" />
+</button>
+
+    </div>
+</section>
+
+<section>
+       <div class="products-container">
+        <!-- المنتج 1 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/IB7796_03_standard.avif" alt="Front View" class="product-image front">
+                <img src="img/IB7796_01_02_hover_standard.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+
+        <!-- المنتج 2 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/JH8732_01_00_standard.avif" alt="Front View" class="product-image front">
+                <img src="img/JH8732_02_standard_hover.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+
+        <!-- المنتج 3 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/HT5027_03_standard_hover.avif" alt="Front View" class="product-image front">
+                <img src="img/HT5027_02_standard.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+
+        <!-- المنتج 4 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/JJ3072_21_model.avif" alt="Front View" class="product-image front">
+                <img src="img/JJ3072_23_hover_model.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 5 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/JP7012_01_00_standard.avif" alt="Front View" class="product-image front">
+                <img src="img/JP7012_02_standard_hover.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 6 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/JI7546_21_model.avif" alt="Front View" class="product-image front">
+                <img src="img/JI7546_23_hover_model.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 7 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/JJ3633_HM1.avif" alt="Front View" class="product-image front">
+                <img src="img/JJ3633_HM3_hover.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 8 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/IM7840_21_model.avif" alt="Front View" class="product-image front">
+                <img src="img/IM7840_23_hover_model.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 9 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/IC5701_01_laydown.avif" alt="Front View" class="product-image front">
+                <img src="img/IC5701_01_laydown.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 10 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/JH5457_01_standard.avif" alt="Front View" class="product-image front">
+                <img src="img/JH5457_02_standard_hover.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 11 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/IS9014_01_standard.avif" alt="Front View" class="product-image front">
+                <img src="img/IS9014_04_standard.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+        <!-- المنتج 12 -->
+        <div class="product-card">
+            <div class="product-badge">-30%</div>
+            <div class="product-actions">
+                <div class="action-btn">
+                    <i class="far fa-heart"></i>
+                </div>
+                <div class="action-btn">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+            </div>
+            <div class="product-image-container">
+                <img src="img/IV9650_21_model.avif" alt="Front View" class="product-image front">
+                <img src="img/IV9650_23_hover_model.avif" alt="Back View" class="product-image back">
+            </div>
+            <div class="product-info">
+                <div class="product-name">AUDIAS X FAIN HID SLIM DRESS</div>
+                <div class="product-price">
+                    <span class="current-price">SAR 173.00</span>
+                    <span class="original-price">SAR 246.00</span>
+                </div>
+                <div class="product-category">Women Sportswear</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+        <div class="hot">
+            <h2>Become a Member & get 10% off</h2>
+
+            <button class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" viewBox="0 0 256 262">
+                <path fill="#4285F4" d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"></path>
+                <path fill="#34A853" d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"></path>
+                <path fill="#FBBC05" d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"></path>
+                <path fill="#EB4335" d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"></path>
+              </svg>
+                SING UP with Google
+              </button>
+        </div>
+     </section>
+
+
+     <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-column">
+            <h4>PRODUCTS</h4>
+            <ul>
+              <li><a href="#">Shoes</a></li>
+              <li><a href="#">Clothing</a></li>
+              <li><a href="#">Accessories</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>SPORTS</h4>
+            <ul>
+              <li><a href="#">Motorsport</a></li>
+              <li><a href="#">Running</a></li>
+              <li><a href="#">Basketball</a></li>
+              <li><a href="#">Football</a></li>
+              <li><a href="#">Yoga</a></li>
+              <li><a href="#">Outdoor</a></li>
+              <li><a href="#">Tennis</a></li>
+              <li><a href="#">Training</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>CATEGORY</h4>
+            <ul>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">Kids</a></li>
+              <li><a href="#">Outlet</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>COMPANY INFO</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Carbon Footprint</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">adiClub</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>SUPPORT</h4>
+            <ul>
+              <li><a href="#">Help</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">Order Tracker</a></li>
+              <li><a href="#">adiClub & Newsletter</a></li>
+              <li><a href="#">Vouchers</a></li>
+              <li><a href="#">Size Charts</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Storefinder</a></li>
+              <li><a href="#">Whatsapp Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>FOLLOW US</h4>
+            <div class="social-icons">
+              <a href="#"><img src="css/img/تصميم بدون عنوان (3).png" alt="Facebook" /></a>
+              <a href="#"><img src="css/img/تصميم بدون عنوان.png" alt="Instagram" /></a>
+              <a href="#"><img src="css/img/تصميم بدون عنوان (1).png" alt="YouTube" /></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            <a href="#">Data Settings</a> |
+            <span>🇸🇦 Saudi Arabia</span> |
+            <a href="#">Cookie Settings</a> |
+            <a href="#">Privacy Policy</a> |
+            <a href="#">Terms And Conditions</a> |
+            <a href="#">Imprint</a>
+          </p>
+          <p class="legal">Adidas Arabia Trading - CR Number 1010876150 - VAT Number 311621452900003 <br> programming ( Mohammed Thabet )</p>
+        </div>
+      </footer>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-btn');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const closeBtn = document.querySelector('.mobile-close-btn');
+            
+            // فتح القائمة
+            hamburger.addEventListener('click', function() {
+                mobileNav.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            // إغلاق القائمة
+            closeBtn.addEventListener('click', function() {
+                mobileNav.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+            
+            // إغلاق القائمة عند النقر على أي رابط
+            document.querySelectorAll('.mobile-nav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileNav.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                });
+            });
+            
+            // إعادة تعيين عند تغيير حجم الشاشة
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    mobileNav.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
