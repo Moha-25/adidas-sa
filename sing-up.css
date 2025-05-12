@@ -168,6 +168,7 @@
     display: flex;
     justify-content: center; /* أفقي */
     align-items: center;     /* عمودي */
-    height: 100vh;           /* يجعل العنصر في منتصف الشاشة */
+    height: 100vh;          /* يجعل العنصر في منتصف الشاشة */
+    margin-left: 31px;
   }
 }
